@@ -5,11 +5,11 @@ FROM openjdk:11-jre-slim
 WORKDIR /apk
 
 #COPYING THE JAR FILE TO OUR FOLDER
-COPY Maven-/target/java-1.0-SNAPSHOT.jar /apk/java-1.0-SNAPSHOT.jar
+COPY target/my-maven-project-1.0-SNAPSHOT.jar /apk/java-1.0-SNAPSHOT.jar
 
 #ATTACHING PORT TO THE CONTAINER TO ACCES
 EXPOSE 87
 
 #PASSING COMMAND IN DOCKERFILE
-CMD [ "java", "-jar", "java-1.0-SNAPSHOT.jar" ]
+CMD [ "java", "-jar", "my-maven-project-1.0-SNAPSHOT.jar" ]
 
